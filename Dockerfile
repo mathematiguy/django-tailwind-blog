@@ -38,3 +38,5 @@ COPY requirements.txt /root/requirements.txt
 RUN pip3 install --timeout 120 -r /root/requirements.txt
 
 RUN pip3 install django-tailwind
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
