@@ -24,7 +24,7 @@
   * [Admin Screenshots](#admin-screenshots)
   * [Deployment](#deployment)
   * [Conclusion](#conclusion)
-  
+
 ## Installation
 1. Clone the repository:
 ```
