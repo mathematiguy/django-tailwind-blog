@@ -10,9 +10,11 @@ DOCKER_ARGS ?=
 
 .PHONY: docker docker-push docker-pull enter enter-root
 
-runserver: DOCKER_ARGS=-p 8000:8000
+migrate:
+	docker-compose run app python /code/manage.py migrate
+
 runserver:
-	$(RUN) python3 manage.py runserver 0.0.0.0:8000
+	docker-compose up app
 
 docker:
 	docker build $(DOCKER_ARGS) --tag $(IMAGE):$(GIT_TAG) .
